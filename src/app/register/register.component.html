@@ -1,0 +1,52 @@
+
+ <br>
+ <br>
+ <br>
+<br> <br> 
+      <div class="container">
+
+          <div class="row">
+      
+              <div class="col-md-12">
+      
+                  <div class="table-responsive">
+      
+                    <table id="table" class="table table-bordred table-striped">
+      
+                        
+    <thead>
+    <tr>
+      <th>Employee Id</th>
+      <th>NAME</th>
+      <th>Email</th>
+      <th>AGE</th>
+      <th>MOBILE</th>
+      <th>GENDER</th>
+      <th>QUALIFFICATION</th>
+      <th>Update</th>
+       <th>Delete</th>
+    </tr>
+  </thead>
+ <tr *ngFor="let elist of employee">
+  <span class="badge">{{elist.employeeid}}</span>
+      <td>{{elist.employeename}}</td>
+      <td> {{elist.email}}</td>
+      <td>{{elist.age}}</td>
+      <td> {{elist.mobile}}</td>
+      <td>{{elist.gender}}</td>
+      <td> {{elist.qualification}}</td>
+      <td><a routerLink="/update/{{elist.employeeid}}"><button>Update</button></a></td>
+      <td><button (click)="delete(elist)">Delete</button></td>
+ 
+   </tr>
+  </tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div> 

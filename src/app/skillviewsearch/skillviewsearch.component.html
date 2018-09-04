@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+  <div class="container">
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <div class="table-responsive">
+
+              <table id="mytable" class="table table-bordred table-striped">
+
+                   <thead>
+
+                        <!--<th>SkillId</th>-->
+
+                        <th>EmployeeId</th>
+
+                        <th>EmployeeName</th>
+
+                        <th>skillType</th>
+
+                        <th>certifications</th>
+
+                        <th>studentsTrained</th>
+                        
+                        <th>feedbackRating</th>
+
+                       
+                    
+
+                   </thead>
+
+                   <tbody>
+
+                    <tr *ngFor="let skills of skillv">
+
+                       <!-- <td>{{skills.skillId}}</td>-->
+
+                        <td>{{skills.employeeid}}</td>
+
+                        <td>{{skills.employeename}}</td>
+
+                        <td>{{skills.skillType}}</td>
+
+                        <td>{{skills.certifications}}</td>
+
+                        <td>{{skills.studentsTrained}}</td>
+
+                           <td>{{skills.feedbackRating}}</td>
+
+                           
+                        
+                     
+                      
+                    </tr>
+
+   
+
+                   </tbody>
+
+            </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>

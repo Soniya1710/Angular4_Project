@@ -1,0 +1,21 @@
+
+<h2>UpdateYourDetails</h2>
+
+<div *ngIf="employee">
+   
+
+
+   <table>
+     <caption> <h2>{{ employee.employeename | uppercase }} Details</h2>  </caption>
+     <tr><td>Employee Id</td><td>{{employee.employeeid}}</td></tr> 
+     <tr><td>Employee Name</td><td><input [(ngModel)]="employee.employeename" placeholder="Employee Name"/></td></tr> 
+     <tr><td>Employee Email</td><td><input [(ngModel)]="employee.email" placeholder="Employee mailID"/></td></tr> 
+     <tr><td>Employee Password</td><td> <input [(ngModel)]="employee.pass" placeholder="Password"/></td></tr> 
+     <tr><td>Employee Age</td><td> <input [(ngModel)]="employee.age" placeholder="Age"/></td></tr> 
+     <tr><td>Employee Mobile</td><td><input [(ngModel)]="employee.mobile" placeholder="Mobile"/></td></tr> 
+     <tr><td>Employee Gender</td><td><input [(ngModel)]="employee.gender" placeholder="Gender"/></td></tr> 
+     <tr><td>Employee Qualification</td><td><input [(ngModel)]="employee.qualification" placeholder="Qualification"/></td></tr> 
+    <tr><td><button (click)="goBack()">Back to Main</button></td><td><button (click)="save()">save</button></td></tr>
+    </table> 
+               
+    </div>         

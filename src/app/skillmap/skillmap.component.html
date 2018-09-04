@@ -1,0 +1,146 @@
+<!-- 
+ <div>
+    <table style="position: absolute;left: 500px;top: 150px">
+       
+    <tr>
+    <td><label>Employee id:</label></td>
+    <td> <input #employeeid></td>
+    </tr>
+  
+    <tr>
+    <td><label>Employee name:</label>
+    <td><input #employeename></td>
+   </tr>
+  
+      <tr>
+    <td> <label>skillName:</label></td>
+    <td> <input #skillName></td>
+      </tr>
+  
+        
+      <tr>
+      <td> <label>certification:</label></td>
+      <td> <input #certification></td>
+      </tr>
+  
+  
+      <tr>
+      <td><label>studentHandle:</label></td>
+      <td><input #studentHandle></td>
+      </tr>
+  
+      <tr>
+            <td><label>studentPlaced:</label></td>
+           <td><input #studentPlaced></td>
+      </tr>
+  
+     
+     <td> <button (click)="add(employeeid.value,employeename.value,skillName.value,certification.value,studentHandle.value,studentPlaced.value)">
+          ADD
+        </button>   </td>
+      
+      <td></td> </table> -->
+      <div class="form-group">
+ 
+        <label>EmployeeId:
+          <input #employeeid class="form-control">
+        </label><br/>
+        <label>EmployeeName:
+          <input #employeename class="form-control">
+        </label><br/>
+        <label>SkillName:
+          <input #skillName class="form-control">
+        </label><br/>
+        <label>Certification:
+          <input #certification class="form-control">
+        </label><br/>
+        <label>studentHandle:
+          <input #studentHandle class="form-control">
+        </label><br/>
+        <label>studentPlaced:
+          <input #studentPlaced class="form-control">
+        </label><br/>
+       
+        
+        <button (click)="add(employeeid.value,employeename.value,skillName.value,certification.value,studentHandle.value,studentPlaced.value)">
+          ADD
+        </button>
+        
+      </div>
+      
+      
+      
+        <div class="container">
+      
+          <div class="row">
+      
+              <div class="col-md-12">
+      
+                  <div class="table-responsive">
+      
+                    <table id="mytable" class="table table-bordred table-striped">
+      
+                         <thead>
+      
+                             
+      
+                              <th>EmployeeId</th>
+      
+                              <th>EmployeeName</th>
+      
+                              <th>SkillName</th>
+      
+                              <th>Certification</th>
+      
+                              <th>StudentHandle</th>
+                              
+                              <th>StudentPlaced</th>
+      
+                             
+                              <th>Update</th>
+      
+                              <th>Delete</th>
+      
+                         </thead>
+      
+                         <tbody>
+      
+                          <tr *ngFor="let skills of skillv ">
+      
+                           
+      
+                              <td>{{skills.employeeid}}</td>
+      
+                              <td>{{skills.employeename}}</td>
+      
+                              <td>{{skills.skillName}}</td>
+      
+                              <td>{{skills.certification}}</td>
+      
+                              <td>{{skills.studentHandle}}</td>
+      
+                                 <td>{{skills.studentPlaced}}</td>
+      
+                                 
+                              
+                           
+                              <td><a routerLink="/details/{{skills.employeeid}}">Update</a></td>
+                          
+                     
+                            
+                              <td><button (click)="delete(skills)">Delete</button></td>
+                          </tr>
+      
+         
+      
+                         </tbody>
+      
+                  </table>
+      
+                  </div>
+      
+              </div>
+      
+          </div>
+      
+      </div> 

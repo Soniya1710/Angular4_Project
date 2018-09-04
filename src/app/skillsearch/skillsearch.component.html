@@ -1,0 +1,26 @@
+<head>
+  <style type="text/css">
+    div
+    {
+      border-style: double;
+    }
+  </style>
+
+</head>
+<hr>
+<div id="search-component">
+  <h4 style="font-family: Perpetua Titling MT">SkillSearch</h4>
+
+  <h4 style="font-family:Sitka Text">Type Skills:</h4><input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let skills of skillv$ | async" >
+      <a routerLink="/views/{{skills.skillType}}">
+      {{skills.skillType}}
+      </a>
+    </li>
+  </ul>
+  
+</div>
+
+

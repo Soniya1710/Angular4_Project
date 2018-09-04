@@ -1,0 +1,20 @@
+<h2>UpdateYourDetails</h2>
+
+<div *ngIf="skills">
+   
+
+
+   <table>
+     <caption> <h2>{{ skills.employeename | uppercase }} Details</h2>  </caption>
+     <tr><td>Employee Id</td><td>{{skills.employeeid}}</td></tr> 
+     <tr><td>Employee Name</td><td><input [(ngModel)]="skills.employeename" placeholder="Employee Name"/></td></tr> 
+     <tr><td>Skill Name</td><td><input [(ngModel)]="skills.skillName" placeholder="skillName"/></td></tr> 
+     <tr><td> certification</td><td> <input [(ngModel)]="skills.certification" placeholder="certification"/></td></tr> 
+     <tr><td>studentHandle</td><td> <input [(ngModel)]="skills.studentHandle" placeholder="studentHandle"/></td></tr> 
+     <tr><td> StudentPlaced</td><td><input [(ngModel)]="skills.studentPlaced" placeholder="studentPlaced"/></td></tr> 
+     
+    <tr><td><button (click)="goBack()">Back to Main</button></td><td><button (click)="save()">save</button></td></tr>
+    </table> 
+               
+    </div>         
+
